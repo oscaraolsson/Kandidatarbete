@@ -1,0 +1,68 @@
+
+.sidenav {
+    height: 100%;
+    width: 40%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: deepskyblue;
+    overflow-x: hidden;
+    padding-top: 10%;
+    padding-left: 4%;
+    padding-right: 4%;
+    font: "Roboto";
+}
+
+.main {
+    margin-left: 40%;
+    padding-right: 30%; 
+    padding-top: 15%;
+    padding-left: 50px;
+}
+
+
+/*FOR SUCCESSFULADMIN*/
+.tabs {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+  }
+  
+  .tabs button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+  }
+  
+  .tabs button:hover {
+    background-color: #ddd;
+  }
+  
+  .activetab {
+    background-color: #ccc;
+  }
+  
+  .tabcontent {
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+  }
+
+  #createproducttypeform input {
+    width: 50%;
+    text-align:left;
+  }
+
+  #tabcontainer {
+    width: 80%;
+    max-width: 1500px;
+  }
+
+  #stocktab {
+    font-size: 12px;
+  }

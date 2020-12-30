@@ -1,0 +1,44 @@
+
+<head>
+    <script src="resources/libs/jquery.js"></script> 
+    <script type = "text/javascript" src = "admin/admin.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="admin/admin.css"> 
+</head>
+
+<script id="view-admin" type="text/html">
+    <div class="login-form">
+        <form id="loginform">
+            <div class="form-group">
+                <label for="username">Användarnamn:</label><br>
+                <input class="form-control" type="username" id="username" name="usernamebox" placeholder="Användarnamn"><br>
+            </div>
+            <div class="form-group">
+                <label for="password">Lösenord:</label><br>
+                <input class="form-control" placeholder="Lösenord" type="password" id="password" name="passwordbox">
+            </div>
+            <input class = "btn btn-dark" type="button" value="Logga in" onclick="login('loginform', ['username', 'password'])" >
+            
+        </form>
+    </div>
+
+    <!--button onclick="register();">Registrera dig </button--> 
+</script>
+
+<body> 
+    <div class = "sidenav">
+        <h1>
+            LiU-Store
+        </h1>
+        <br>
+        <br>
+        <h2>
+            Inloggning för <br> administratör
+        </h2>
+        <br>
+        <p>
+            Här kan du som en del av LiU store:s <br> CREW logga in för att redigera sidan.
+        </p>
+    </div>
+    <div class = "main" id ="admin-main"></div>
+</body>

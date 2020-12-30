@@ -1,0 +1,11 @@
+#Python Cache
+__pycache__
+
+#Environment
+venv/
+
+#Vscode
+.VSCode/
+
+#Database
+server/database.database

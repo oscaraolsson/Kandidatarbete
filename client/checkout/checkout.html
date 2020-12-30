@@ -1,0 +1,94 @@
+<head> 
+  <title>Checkout</title>
+  <meta charset="utf-8" />
+    <title>Stripe Card Elements sample</title>
+    <meta name="description" content="A demo of Stripe Payment Intents" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="checkout.css" />
+</head>
+<body>
+  <div class="sr-root">
+    <div class="sr-info">
+        <form onsubmit="return logSubmit()" id="form">
+            <h3>Faktureringsuppgifter</h3>
+            <div class="form-input">
+            <label for="fname"> Namn</label>
+            <input type="text" id="fname" name="firstname" placeholder="John M. Doe" required>
+          </div>
+          <div class="form-input">
+
+            <label for="email"> Email</label>
+            <input type="text" id="email" name="email" placeholder="john@example.com" required>
+          </div>
+
+            <div class="form-input">
+
+            <label for="telephone"> Telefonnummmer</label>
+            <input type="text" id="telephone" name="telephone" placeholder="0706301998" required>
+          </div>
+
+            <div class="form-input">
+
+            <label for="adr"> Adress</label>
+            <input type="text" id="adr" name="address" placeholder="542 W. 15th Street" required>
+          </div>
+
+            <div class="form-input">
+
+            <label for="zip"> postkod</label>
+            <input type="text" id="zip" name="zip" placeholder="582 37" required>
+          </div>
+
+            <div class="form-input">
+
+            <label for="apartnmb"> Lägenhetsnummer</label>
+            <input type="text" id="apartnmb" name="apartnmb" placeholder="1201">
+          </div>
+
+          <div class="form-input">
+
+            <label for="city"> Stad</label>
+            <input type="text" id="city" name="city" placeholder="New York" required>
+          </div>
+
+          <div class="form-submit">
+
+        <input type="submit" id="infobutton" value="Fortsätt till betalning" class="btn">
+      </div>
+
+      </form>
+    </div>
+
+    
+    
+    <div class="sr-main hidden">
+      <form id="payment-form" class="sr-payment-form">
+        <h3>Kortuppgifter</h3>
+        <div class="sr-combo-inputs-row">
+          <div class="sr-input sr-card-element" id="card-element"></div>
+        </div>
+        <div class="sr-field-error" id="card-errors" role="alert"></div>
+        <button id="submit" class="btn">
+          <div class="spinner hidden" id="spinner"></div>
+          <span id="button-text">Betala</span><span id="order-amount"></span>
+        </button>
+      </form>
+    </div>
+
+      <div class="sr-result hidden">
+        <h3 style="text-align:center">Betalning genomförd</h3>
+        <p>Tack för att du har handlat hos LiU Store!</p>
+        <p>Ett bekräftelsemail har skickats med din angivna epostadress</p>
+        <p>Ha en helt okej dag</p>
+        <button id="myButton" class="btn" >Gå till startsida</button>
+        <script type="text/javascript">
+        document.getElementById("myButton").onclick = function () {
+        location.href = "/";
+         };
+      </script>
+      </div>
+  </div>
+<script src="/checkout/checkout.js" defer></script>
+<script src="https://js.stripe.com/v3/"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</body>

@@ -1,0 +1,94 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+   
+    <!-- Bootstrap CSS JQUERY -->
+    <script src="../resources/libs/jquery.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="icon" href="../resources/images/favicon.ico">
+     <!-- CSS Stylesheets-->
+     <link rel="stylesheet" type="text/css" href="web_shop/web_shop.css">
+     <link rel="stylesheet" type="text/css" href="client.css">
+
+    </head>
+
+    <body>
+
+      
+      
+
+<div id="web_shop">
+    <div id='searchterm-div'></div>
+    <div class ='p-floatcontainer' id="p-floatcontainer1">
+      <div id="productbigcontainer" class="big-p-float">
+        <div id="productbig" class="big-p-float-in">
+          <div class="bigimagecontainer"> <img id="big-p-img" class="big-p-img" src=""> </div>
+          <div class="bigdesccontainer">
+            <a class="shopcross" onclick='closeBig()'>&#x2715;</a>
+            <br>
+            <div id="big-p-name" class="big-p-name"> </div>
+            <div id="big-p-price" class="big-p-price"> </div>
+            <div id="big-p-wheretobuy" class="big-p-wheretobuy"> </div>
+            <div id="big-p-stock" class="big-p-stock"> Lagerstatus </div>
+            <div id="big-p-combination" class="big-p-stock"> Vald Kombination </div>
+            <div id="big-p-desc" class="big-p-desc"> </div>
+            <div id="big-p-color" class="big-p-color"> </div>
+            <div id="big-p-size" class="big-p-size"> </div>
+            <div id="amountaddcontainer">
+              <button onclick='addToCart()' id="big-p-add" class="big-p-butt big-p-add"> Lägg i varukorgen </button>
+              <div id="amountaddinnercontainer">
+                <button id="big-p-amountplus" class="big-p-butt big-p-amount" onclick="increaseAmount()"> + </button>
+                <input id="big-p-amountinput" class="big-p-amount big-p-butt" type="number" id="quantity" name="quantity" min="1" value="1">
+                <button id="big-p-amountminus" class="big-p-butt big-p-amount" onclick="decreaseAmount()"> - </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Last element in html doc to stack on top of all other elements  without using z-index -->
+    <div id="filterbuttonwrapper" class="filterbuttonwrapper">
+      <div class="dropdownfilter filter1">
+        <button class="filterbutton">Filtrera ∇</button>
+        <div id='dropdownfilter'class="dropdowncontent">
+          <a> Välj utbud</a>
+          <a> <input type='radio' id='fullrange' name='range' checked>
+            <label for='fullrange'>Hela utbudet</label> </a>
+          <a> <input type='radio' id='onlinerange' name='range'>
+            <label for='onlinerange'>Onlineutbud</label> </a>
+          <a> <input type='radio' id='offlinerange' name='range'>
+            <label for='offlinerange'>Butiksutbud</label> </a>
+          <hr>
+        </div>
+      </div>
+      <div class="dropdownfilter filter2">
+        <button class="filterbutton active">Sortera &#8645;</button>
+        <div class="dropdowncontent">
+          <a class='sortbutt' onclick="shopsort('priceup')">billigast först</a>
+          <a class='sortbutt' onclick="shopsort('pricedown')">dyrast först</a>
+          <a class='sortbutt' onclick="shopsort('alpha')">alfabetisk ordning</a>
+        </div>
+  
+      </div>
+    </div>    
+
+</div> 
+<script>
+  var url = "web_shop/web_shop.js";
+  $.getScript(url);
+</script> 
+</body>
+
+<!-- </html> -->

@@ -1,0 +1,26 @@
+<head>
+    <script src="resources/libs/jquery.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="client.css"> 
+    <link rel="icon" href="resources/images/favicon.ico">
+    <script type = "text/javascript" src = "pagenotfound/pagenotfound.js"></script>
+  </head>
+  
+  <script id="view-page-not-found" type = text/html>
+      <div>
+          <h1 style="text-align: left">Sidan kunde inte hittas</h1>
+          <h3 style="text-align: left">Du har lyckats hitta en länk som inte fungerar. Maila gärna <a href="mailto:it@liustore.se">IT-ansvarig</a> och berätta hur du kom hit.</h3>
+      </div>
+  </script>
+  
+  
+  <body>
+      <div id = "page-not-found-main"></div>
+      <!--script>pageNotFound()</script-->
+  </body>
+  
+  <script>
+      $("#page-not-found-main").html($("#view-page-not-found").html());
+  </script>
+  

@@ -1,0 +1,88 @@
+<head>
+  <script src="resources/libs/jquery.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="client.css"> 
+  <link rel="stylesheet" href="news/news.css"> 
+  <link rel="icon" href="resources/images/favicon.ico">
+  <script type = "text/javascript" src = "news/news.js"></script>
+</head>
+
+<script id="view-news" type = text/html>
+    <div class="news-container">
+            <!--div class="title-holder"-->
+                <h4 class="news-header" style="padding-left: 40px">Senaste händelserna</h4>
+                <p class ="left-aligned" style="padding-left: 40px">Håll dig uppdaterad med alla våra senaste nyheter.</p>
+            <!--/div-->
+            <div id="admin-button-container"></div>
+        <div class="card-container">
+            <div id="card-columns" class="grid">
+            </div>
+        </div>
+    </div>
+</script>
+
+<div class="modal" id="add-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Lägg till artikel</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="header" class="col-form-label">Rubrik: </label>
+              <input type="text" style="display: block" class="form-control" id="header-input-add"></input>
+            </div>
+            <div class="form-group">
+              <label for="text" class="col-form-label">Brödtext:</label>
+              <textarea class="form-control" id="text-input-add" style="display: block"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="date" class="col-form-label">Datum:</label>
+                <input type="date" class="form-control" id="date-input-add" style="display: block"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="picture" class="col-form-label">Bild:</label>
+                <input type="file" class="form-control" id="picture-input-add" style="display: block"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Stäng</button>
+          <button type="button" class="btn btn-primary" onclick=submitAdd()>Lägg till</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div id="share-modal" class="modal" role="dialog">
+  <div class="modal-dialog modal-dialog-centered">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div id="share-modal-body" class="modal-body">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" onclick=emptyShareModal()>Stäng</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<body>
+    <div id = "news-main"></div>
+    <script>getNews()</script>
+</body>
+
+<script>
+    $("#news-main").html($("#view-news").html());
+</script>

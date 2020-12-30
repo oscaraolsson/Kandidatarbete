@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   
+    <!-- Bootstrap CSS JQUERY -->
+ 
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ 
+   <!-- 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>-->
+
+    <script src="resources/libs/jquery.js"></script> 
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/v4-shims.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <link rel="icon" href="resources/images/favicon.ico">
+    <link rel="stylesheet" href="/client.css"> 
+
+    <!--Google fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:wght@700&family=Comfortaa:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
+
+
+  <title id="tab-text">LIUSTORE</title>
+</head>
+
+<body>
+  <container>
+   
+    <nav class="navbar navbar-custom navbar-expand-md sticky-top">
+        <a class="navbar-brand" href="/hem">
+          <img src="resources/images/LiU-Logo.png" alt="Logo" class="img-logo">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbarLg" aria-controls="collapsibleNavbar" aria-expanded="false">
+        <span class="navbar-toggler-icon-"><i class="fas fa-bars"></i></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="collapsingNavbarLg">
+        <ul class="nav navbar-nav mr-auto">
+          <li class="nav-item"><a  class="nav-link" href="/hem">Hem</a></li>
+          <li class="nav-item"><a  class="nav-link" href="/webbshop">Webbshop</a></li>
+          <li class="nav-item"><a  class="nav-link" href="/foreningar">Föreningar</a></li>
+          <li class="nav-item"><a  class="nav-link" href="/nyheter"> Nyheter</a></li>
+          <li class="nav-item"><a  class="nav-link" href="/omoss">Om oss</a></li>
+        </ul>   
+        <ul class="nav navbar-nav ml-auto">      
+        <li> <div class="form-inline">
+            <div class="form-group">
+                <input class="form-control" id="searchinput" type="text" placeholder="Sök produkt.." aria-label="Search">
+                <button class="button-nav" id="searchbutton" type="submit" onclick=searchFunction()><i class="fas fa-search" aria-hidden="true"></i></button>
+              </div>
+            </div> 
+        </li>
+        <li class="nav-item"><a class="nav-link" href="/cart" id="cart"><i class="fa fa-shopping-cart"></i><span class="cart-amount">(0)</span></a></li>
+       </ul>
+      </div> 
+        
+      
+      <div class="progress-container">
+        <div class="progress-bar" id="progress-bar"></div>
+      </div>
+    </nav>
+   
+
+        
+  <div class="container-sm" id = "main-client-container">
+        <div id="home_page"></div>
+  </div>
+</container>
+
+<!-- Footer -->
+<footer class="page-footer special-color-dark pt-4">
+  
+  <!-- Footer Elements -->
+  <div class="socialcontainer">
+    <hr>
+    <li class="list-inline-item">
+      <a onclick='gosocial("https://www.facebook.com/pg/liustore/about/?ref=page_internal")' class="fab fa-facebook socialbutt"></a>
+        
+    </li>
+    <li class="list-inline-item">
+      <a onclick='gosocial("https://instagram.com/liustore_crew?igshid=1sru4drem1vxr")' class="fab fa-instagram socialbutt"></a>
+  </li>
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a>Kandidatgruppen :D </a>
+  </div>
+  </div>
+
+  <!-- Copyright -->
+  
+  <!-- Copyright -->
+
+</footer>
+ 
+<!-- Footer -->
+
+
+      
+        <script src="client.js" type="text/javascript"></script>
+    </body>
+</html>

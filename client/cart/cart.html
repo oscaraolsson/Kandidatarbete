@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	
+  <script src="../resources/libs/jquery.js"></script> 
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../resources/images/favicon.ico">
+  <link rel="stylesheet" href="cart/cart.css">
+  <link rel="stylesheet2" type="text/css" href="client.css">
+  <script type = "text/javascript" src = "cart/cart.js"></script>
+</head>
+
+<div id="the-cart">
+
+<script id="view-cart" type="text/html">
+
+ 	<header id="page-header">
+		<div class="container container-rounded">
+			<h1>Varukorgen </h1>
+		</div>
+	</header>
+	
+	<div class="container">
+
+		<section id="cart"> 
+			<div class="product">
+
+				<div class="content"></div>
+
+				<footer class="content"></footer>
+			</div>
+
+		</section>
+		
+
+	</div>
+
+
+	<footer id="page-footer">
+		
+		<div class="container calc">
+
+			<div class="left">
+				<h2 class="subtotal">Totalt: <span></span> kr</h2>
+				<h2 class="tax">Varav moms: <span></span> kr</h2>
+				<h2 class="shipping">Frakt (prel.): <span>17</span> kr</h2>
+				<h3 calss = "shipping-info"><i class="fa fa-envelope-o"></i> Leveransen sker med <br />PostNord och tar 1-7 dagar</h3>
+			</div>
+
+			<div class="right">
+				<h1 class="total">Att betala: <span></span> kr</h1>
+				<h4 class="button">Till betalning</h4>
+			</div>
+		
+		</div>
+	</footer>
+</script>
+</div>
+
+
+<script>
+	$.getScript("cart.js");
+	$.getScript("../web_shop/web_shop.js");
+</script>
+</html>

@@ -1,0 +1,172 @@
+<body>
+    <a href="http://www.liustore.se">Till vanliga hemsidan</a>
+    <head>
+        
+        <script src='../resources/libs/jquery.js'></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src='successfuladmin.js'></script>
+        
+        <link rel="stylesheet" href="admin.css"> 
+        <link rel="icon" href="admin/favicon.ico">
+    </head>
+
+    <div class="tabs">
+        <button id='tabbutton1' class="tablinks" onclick="tab('stocktab')">Ändra lagersaldon</button>
+        <button id='tabbutton2' class="tablinks" onclick="tab('orderstab')">Se/Ändra ordrar</button>
+        <button id='tabbutton3' class="tablinks" onclick="tab('webshoptab')">Redigera webshopen</button>
+    </div>
+    
+  <div id='tabcontainer'>
+    <div id='stocktab' class='tabcontent'>
+        <h3>Ändra lagersaldon:</h3>
+        <div class="container---sm" id="stock-main">
+            <div class="row">
+            <div class="col"><H1>Produkttyp</H1></div>
+            <div class="col"><H1>Färg</H1></div>
+            <div class="col"><H1>Storlek</H1></div>
+            <div class="col"><H1>Lagersaldo</H1></div>
+            </div>
+        </div> 
+            <div class="modal" id="admin-edit-stock-modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="modalLabel">Ändra lagersaldo:</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form class="Edit-stock">
+        
+                    <div class="make-form">
+                      <label for="isStock" class="col-form-label">antal i lager:</label>
+                      <input class="numeric" id="stock-input"></input>
+                    </div>
+        
+                  </form>
+                </div>
+                <div id="stock-modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Avbryt</button>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id='orderstab' class='tabcontent'>
+
+    <div class="container-fluid" id="new-container">
+        <div>
+        <h2>Obehandlade ordrar</h2>
+        <hr>
+        <div class="grid" id="new-grid"></div>
+        <hr></div>
+      </div>
+      <div class="container-fluid" id="shipped-container">
+        <h2>Skickade ordrar</h2>
+        <div class="grid" id="shipped-grid"></div>
+      </div>
+    
+      <div class="modal" id="edit-order" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalLabel">Ändra order</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form class="Edit-aboutus">
+    
+                <div class="header">
+                  <label for="header" class="col-form-label">ändra namn:</label>
+                  <textarea class="form-control" id="name-input"></textarea>
+                </div>
+                <div class="text">
+                  <label for="text" class="col-form-label">email:</label>
+                  <textarea class="form-control" id="email-input"></textarea>
+                </div>
+                <div class="text">
+                  <label for="text" class="col-form-label">telefonnummer:</label>
+                  <textarea class="form-control" id="phone-input"></textarea>
+                </div>
+                <div class="text">
+                  <label for="text" class="col-form-label">adress:</label>
+                  <textarea class="form-control" id="address-input"></textarea>
+                </div>
+                <div class="text">
+                  <label for="text" class="col-form-label">Stad:</label>
+                  <textarea class="form-control" id="city-input"></textarea>
+                </div>
+                <div class="text">
+                  <label for="text" class="col-form-label">postkod:</label>
+                  <textarea class="form-control" id="ZIPcode-input"></textarea>
+                </div>
+                <div class="text">
+                  <label for="text" class="col-form-label">lgh::</label>
+                  <textarea class="form-control" id="apartmentnumber-input"></textarea>
+                </div>
+                <div class="text">
+                  <label for="text" class="col-form-label">product (produkt ID, poduktname , färg, Storlek, pris, antal):</label>
+                  <textarea class="form-control" id="product-input"></textarea>
+                </div>
+    
+    
+              </form>
+            </div>
+            <div id="edit-modal-footer" class="modal-footer">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div id='webshoptab' class='tabcontent'>
+        <h3>Redigera webbshoppen:</h3>
+        <h2>Lägg till produkttyp:</h2>
+        <form id=createproducttypeform>
+                Produktnamn:
+                <input name='ptname' id='ptname' type="text" class="form-control" placeholder="">
+                Beskrivning:
+                <input name='ptdesc' type="text" class="form-control" placeholder=""> 
+                Pris (siffra, utan "kr" eller "sek"):
+                <input name='ptprice' type="number" class="form-control" placeholder="t.ex: 100"> 
+                Kategorier (separera med komma, utan blanksteg)
+                <input name='ptcats' type="text" class="form-control" placeholder="t.ex: Tröjor,Överdelar,Vattenflaskor">
+                Färger (ange på form '#xxxxxx' (hex)). Separera med komma, utan blanksteg
+                <input name='pthexes' type="text" class="form-control" placeholder="t.ex: #ffffff,#101010"> 
+                Färgnamn (Separera med komma OBS: Måste vara lika många som Färger)
+                <input name='ptrownames' type="text" class="form-control" placeholder="t.ex: färg1,färg2"> Färgnamn (Separera med komma OBS: Måste vara lika många som Färger)
+                URL-er till produktens bilder (en för varje färg, i samma ordning som färgnamn och färger). Om lagt i mappen images/products blir url 'products/produktbild.jpg'   
+                <input name='pturls' type="text" class="form-control" placeholder="t.ex: products/bild1.jpg,products/bild2.jpg"> 
+                Storlekar. Separera med komma utan blanksteg, om produkten ej har storlekar, skriv storlek NA
+                <input name='ptsizes'type="text" class="form-control" placeholder="t.ex: S,M,L"> 
+                Går produkten att beställa online?
+                <input name='ptorderonline' type="checkbox" class="form-control">
+            <button name="ptdata" type="button" onclick="createproducttype()">Lägg till</button>
+        </form>
+        <h2>Radera produkt/ändra produkt:</h2>
+        <button id='getproducts' type="button" onclick='fillrolldownwithproducts()'>Tryck här för att fylla rullmenyn med de produkttyper som finns</button>
+        <select id="ptlistdelete"></select>
+        <button id='deleteproduct' type="button" onclick='deleteselectedproduct()'>Tryck här för att radera den valda produkttypen</button>
+        <select id="ptlistedit">
+            <option value="name">Produktnamn</option>
+            <option value="description">Beskrivning</option>
+            <option value="price">Pris</option>
+            <option value="canOrder">Kan beställas?</option>
+        </select>
+        <button id='editproduct' type="button" onclick='editselectedproduct()'>Tryck här för att redigera den valda produkttypen</button>
+        <h2>Radera produkt/ändra produkt:</h2>
+        <button id='deleteallproducts' type="button" onclick='deleteAllProducts()'>Tryck här för att radera ALLA produkter</button>
+    </div>
+  </div>  
+</body>
